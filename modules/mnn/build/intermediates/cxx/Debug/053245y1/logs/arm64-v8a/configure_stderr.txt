@@ -1,1 +1,0 @@
-ERRORMNN_ROOT: D:/finelink/voiceread/modules/mnn/src/main/cpp/../mnn/

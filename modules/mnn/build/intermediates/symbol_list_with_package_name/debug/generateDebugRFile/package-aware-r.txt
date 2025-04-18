@@ -1,1 +1,0 @@
-com.alibaba.mnnllm.android
