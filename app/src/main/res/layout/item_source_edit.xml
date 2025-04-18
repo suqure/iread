@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ltd.finelink.read.ui.widget.text.TextInputLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/textInputLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="3dp">
+
+    <ltd.finelink.read.ui.widget.code.CodeView
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+</ltd.finelink.read.ui.widget.text.TextInputLayout>

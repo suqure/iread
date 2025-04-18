@@ -1,0 +1,2 @@
+* Due to the storage access restriction of Android, reading needs to set the subdirectory ** under the public directory ** to copy and Download Books, such as Documents/Books, Download/Books
+* If you do not set this parameter, functions related to local books cannot be used

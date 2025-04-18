@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ltd.finelink.read.lib.prefs.PreferenceCategory
+        android:title="@string/cache_manager"
+        app:allowDividerAbove="false"
+        app:allowDividerBelow="false"
+        app:iconSpaceReserved="false">
+
+        <ltd.finelink.read.lib.prefs.Preference
+            android:title="@string/book_name"
+            android:summary="name"
+            android:key="appBookName"
+            app:iconSpaceReserved="false" />
+        <ltd.finelink.read.lib.prefs.Preference
+            android:title="@string/chapter_list"
+            android:summary="chapter"
+            android:key="appChapter"
+            app:iconSpaceReserved="false" />
+        <ltd.finelink.read.lib.prefs.Preference
+            android:title="@string/content"
+            android:summary="chapter"
+            android:key="appContent"
+            app:iconSpaceReserved="false" />
+        <ltd.finelink.read.lib.prefs.Preference
+            android:title="@string/speak_engine"
+            android:summary="TTS"
+            android:key="appTtsEngine"
+            app:iconSpaceReserved="false" />
+
+    </ltd.finelink.read.lib.prefs.PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

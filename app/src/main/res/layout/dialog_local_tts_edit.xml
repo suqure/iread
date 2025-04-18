@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:id="@+id/vw_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/shape_card_view"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="?attr/actionBarStyle"
+            app:title="@string/speak_engine"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/ToolbarTitle" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="ifContentScrolls">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ltd.finelink.read.ui.widget.text.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/name">
+
+                    <ltd.finelink.read.lib.theme.view.ThemeEditText
+                        android:id="@+id/tv_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                </ltd.finelink.read.ui.widget.text.TextInputLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_tts_speaker"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_tts_speaker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/tts_voice"
+                        android:textColor="@color/primaryText"
+                        android:textSize="14sp" />
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_speaker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/speaker_type"
+                        android:theme="@style/Spinner"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_tts_lang"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_tts_lang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/language"
+                        android:textColor="@color/primaryText"
+                        android:textSize="14sp" />
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_lang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/speaker_type"
+                        android:theme="@style/Spinner"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+                <ltd.finelink.read.lib.theme.view.ThemeSwitch
+                    android:id="@+id/sw_refine_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:text="@string/refine_text"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_tts_lang"
+                    tools:ignore="TouchTargetSizeCheck" />
+                <LinearLayout
+                    android:id="@+id/ll_tts_refer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <TextView
+                        android:id="@+id/tv_tts_refer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="@string/tts_model"
+                        android:textColor="@color/primaryText"
+                        android:textSize="14sp" />
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/sp_refer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:entries="@array/speaker_type"
+                        android:theme="@style/Spinner"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/ll_speech"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_tts_SpeechRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_tts_speed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/read_aloud_speed"
+                            android:textColor="@color/primaryText"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_tts_speed_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="3dp"
+                            android:textColor="@color/primaryText"
+                            android:textSize="14sp" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_tts_speech_reduce"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:tooltipText="@string/tts_speech_reduce"
+                            android:contentDescription="@string/tts_speech_reduce"
+                            android:src="@drawable/ic_reduce"
+                            android:tint="@color/primaryText"
+                            tools:ignore="UnusedAttribute" />
+
+                        <ltd.finelink.read.lib.theme.view.ThemeSeekBar
+                            android:id="@+id/seek_tts_speechRate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="45" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_tts_speech_add"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:tooltipText="@string/tts_speech_add"
+                            android:contentDescription="@string/tts_speech_add"
+                            android:src="@drawable/ic_add"
+                            android:tint="@color/primaryText"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_topK"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_tts_SpeechTopK"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_tts_topK"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/model_topK"
+                            android:textColor="@color/primaryText"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_tts_topK_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="3dp"
+                            android:textColor="@color/primaryText"
+                            android:textSize="14sp" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_tts_topK_reduce"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:tooltipText="@string/tts_topK_reduce"
+                            android:contentDescription="@string/tts_topK_reduce"
+                            android:src="@drawable/ic_reduce"
+                            android:tint="@color/primaryText"
+                            tools:ignore="UnusedAttribute" />
+
+                        <ltd.finelink.read.lib.theme.view.ThemeSeekBar
+                            android:id="@+id/seek_tts_topK"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="99" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_tts_topK_add"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:tooltipText="@string/tts_topK_add"
+                            android:contentDescription="@string/tts_topK_add"
+                            android:src="@drawable/ic_add"
+                            android:tint="@color/primaryText"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_topP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_tts_SpeechTopP"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_tts_topP"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/model_topP"
+                            android:textColor="@color/primaryText"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_tts_topP_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="3dp"
+                            android:textColor="@color/primaryText"
+                            android:textSize="14sp" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_tts_topP_reduce"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:tooltipText="@string/tts_topP_reduce"
+                            android:contentDescription="@string/tts_topP_reduce"
+                            android:src="@drawable/ic_reduce"
+                            android:tint="@color/primaryText"
+                            tools:ignore="UnusedAttribute" />
+
+                        <ltd.finelink.read.lib.theme.view.ThemeSeekBar
+                            android:id="@+id/seek_tts_topP"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="10" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_tts_topP_add"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:tooltipText="@string/tts_topP_add"
+                            android:contentDescription="@string/tts_topP_add"
+                            android:src="@drawable/ic_add"
+                            android:tint="@color/primaryText"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_temperature"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/ll_tts_temperature"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:id="@+id/tv_tts_temperature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/model_temperature"
+                            android:textColor="@color/primaryText"
+                            android:textSize="14sp" />
+
+                        <TextView
+                            android:id="@+id/tv_tts_temperature_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:paddingHorizontal="3dp"
+                            android:textColor="@color/primaryText"
+                            android:textSize="14sp" />
+
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_tts_temperature_reduce"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:tooltipText="@string/tts_temperature_reduce"
+                            android:contentDescription="@string/tts_temperature_reduce"
+                            android:src="@drawable/ic_reduce"
+                            android:tint="@color/primaryText"
+                            tools:ignore="UnusedAttribute" />
+
+                        <ltd.finelink.read.lib.theme.view.ThemeSeekBar
+                            android:id="@+id/seek_tts_temperature"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:max="10" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_tts_temperature_add"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:tooltipText="@string/tts_temperature_add"
+                            android:contentDescription="@string/tts_temperature_add"
+                            android:src="@drawable/ic_add"
+                            android:tint="@color/primaryText"
+                            tools:ignore="UnusedAttribute" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_generate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="6dp"
+                        android:paddingRight="6dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+                        <ltd.finelink.read.ui.widget.text.TextInputLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/test_text">
+                            <ltd.finelink.read.lib.theme.view.ThemeEditText
+                                android:id="@+id/tv_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/slogan"
+                                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                        </ltd.finelink.read.ui.widget.text.TextInputLayout>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:id="@+id/ll_tts_generate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="8dp">
+                        <Space
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center" />
+                        <ltd.finelink.read.ui.widget.anima.RotateLoading
+                            android:id="@+id/rotate_loading"
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:layout_margin="6dp"
+                            android:visibility="gone"
+                            android:layout_gravity="center"
+                            app:loading_width="2dp" />
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_tts_test"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:tooltipText="@string/tts_temperature_add"
+                            android:contentDescription="@string/tts_temperature_add"
+                            android:src="@drawable/ic_volume_up"
+                            android:tint="@color/primaryText"
+                            tools:ignore="UnusedAttribute" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+</FrameLayout>

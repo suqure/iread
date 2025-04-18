@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ltd.finelink.read.lib.prefs.PreferenceCategory
+        android:title="@string/backup_restore"
+        app:allowDividerBelow="false"
+        app:iconSpaceReserved="false"
+        app:layout="@layout/view_preference_category">
+
+        <ltd.finelink.read.lib.prefs.Preference
+            android:key="backupUri"
+            android:title="@string/backup_path"
+            android:summary="@string/select_backup_path"
+            app:iconSpaceReserved="false" />
+
+        <ltd.finelink.read.lib.prefs.Preference
+            android:key="web_dav_backup"
+            android:title="@string/backup"
+            android:summary="@string/backup_summary"
+            app:iconSpaceReserved="false" />
+
+        <ltd.finelink.read.lib.prefs.Preference
+            android:key="web_dav_restore"
+            android:title="@string/restore"
+            android:summary="@string/restore_summary"
+            app:iconSpaceReserved="false" />
+
+        <ltd.finelink.read.lib.prefs.Preference
+            android:key="restoreIgnore"
+            android:title="@string/restore_ignore"
+            android:summary="@string/restore_ignore_summary"
+            app:iconSpaceReserved="false" />
+
+        <ltd.finelink.read.lib.prefs.Preference
+            android:key="import_old"
+            android:title="@string/menu_import_old_version"
+            android:summary="@string/import_old_summary"
+            app:iconSpaceReserved="false" />
+
+        <ltd.finelink.read.lib.prefs.SwitchPreference
+            android:key="onlyLatestBackup"
+            android:defaultValue="true"
+            android:title="@string/only_latest_backup_t"
+            android:summary="@string/only_latest_backup_s"
+            app:allowDividerAbove="false"
+            app:allowDividerBelow="false"
+            app:iconSpaceReserved="false" />
+
+    </ltd.finelink.read.lib.prefs.PreferenceCategory>
+
+</androidx.preference.PreferenceScreen>

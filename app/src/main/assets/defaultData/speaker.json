@@ -1,0 +1,22 @@
+[
+	{
+		"id": 2668, 
+		"name": "GPT 女性1", 
+		"type": 0,
+		"cover": "http://file.finelink.ltd/images/gptfemale.jpeg",
+		"path": "http://file.finelink.ltd/read/202407242.speaker",
+		"download": false,
+		"progress": 0,
+		"description": "GPT引擎模型女性型声音"
+	},
+	{
+		"id": 2666, 
+		"name": "GPT 男性3", 
+		"type": 0,
+		"cover": "http://file.finelink.ltd/images/gptmale.jpeg",
+		"path": "http://file.finelink.ltd/read/202407243.speaker", 
+		"download": false,
+		"progress": 0,
+		"description": "GPT引擎模型男性声音"
+	}
+]

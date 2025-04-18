@@ -1,0 +1,12 @@
+[
+  {
+    "customOrder": 5,
+    "enableJs": true,
+    "enabled": true,
+    "singleUrl": true,
+    "sourceGroup": "IRead",
+    "sourceIcon": "https://cdn.jsdelivr.net/gh/gedoor/legado@master/app/src/main/res/mipmap-hdpi/ic_launcher.png",
+    "sourceName": "烏雲净化",
+    "sourceUrl": "https://www.lanzoux.com/b0bw8jwoh"
+  }
+]

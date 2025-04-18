@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AlwaysShowAction">
+
+    <item
+        android:id="@+id/menu_help"
+        android:icon="@drawable/ic_help"
+        android:title="@string/help"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_add_speaker"
+        android:icon="@drawable/ic_add"
+        android:title="@string/add_voice"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_import_local"
+        android:icon="@drawable/ic_import"
+        android:title="@string/import_local"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_engine_config"
+        android:icon="@drawable/ic_volume_up"
+        android:title="@string/engine_setting"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_update_toc"
+        android:icon="@drawable/ic_refresh_black_24dp"
+        android:title="@string/refresh"
+        app:showAsAction="never" />
+
+
+</menu>

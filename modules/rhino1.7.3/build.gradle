@@ -1,0 +1,42 @@
+plugins {
+    alias libs.plugins.android.library
+    alias libs.plugins.jetbrainsKotlinAndroid
+}
+
+android {
+    compileSdk 34
+    namespace 'com.script'
+    kotlin {
+        jvmToolchain {
+            languageVersion.set(JavaLanguageVersion.of(17))
+        }
+    }
+    defaultConfig {
+        minSdk 21
+        targetSdk 34
+
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    lint {
+        checkDependencies true
+    }
+    tasks.withType(JavaCompile).tap {
+        configureEach {
+            options.compilerArgs << "-Xlint:deprecation"
+        }
+    }
+}
+
+dependencies {
+    api(fileTree(dir: 'lib', include: ['rhino-1.7.13-2.jar']))
+
+    implementation(libs.kotlinx.coroutines.core)
+
+//    def coroutines_version = '1.7.3'
+//    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version")
+}

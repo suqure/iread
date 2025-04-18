@@ -1,0 +1,1 @@
+ERRORMNN_ROOT: D:/Android/voiceread/modules/mnn/src/main/cpp/../mnn/

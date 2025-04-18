@@ -1,0 +1,10 @@
+{
+  "model_list": [
+    {
+      "model_id": "Qwen2-0.5B-Chat-q0f16",
+      "model_lib": "qwen2_q0f16",
+      "model_url": "D:\\python\\qwen_mlc",
+      "estimated_vram_bytes": 2174363893
+    }
+  ]
+}

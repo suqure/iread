@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ltd.finelink.read.lib.theme.view.ThemeCheckBox
+        android:id="@+id/cb_source_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/cb_source_id"
+        app:layout_constraintBottom_toTopOf="@id/tv_source_text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+    <ltd.finelink.read.lib.theme.view.ThemeCheckBox
+        android:id="@+id/cb_source_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@id/cb_source_name"
+        app:layout_constraintRight_toLeftOf="@id/cb_source_class"
+        app:layout_constraintBottom_toTopOf="@id/tv_source_text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+    <ltd.finelink.read.lib.theme.view.ThemeCheckBox
+        android:id="@+id/cb_source_class"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:singleLine="true"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintLeft_toRightOf="@id/cb_source_id"
+        app:layout_constraintRight_toLeftOf="@id/tv_open"
+        app:layout_constraintBottom_toTopOf="@id/tv_source_text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/tv_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:background="?attr/selectableItemBackground"
+        android:padding="8dp"
+        android:text="@string/open"
+        android:textColor="@color/secondaryText"
+        app:layout_constraintBottom_toTopOf="@id/tv_source_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/tv_source_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:singleLine="true"
+        android:textColor="@color/secondaryText"
+        app:layout_constraintBottom_toTopOf="@+id/sw_ignore_mode"
+        app:layout_constraintLeft_toLeftOf="@+id/sw_ignore_mode"  />
+    <ltd.finelink.read.lib.theme.view.ThemeSwitch
+        android:id="@+id/sw_ignore_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:text="@string/ignore_rule"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>

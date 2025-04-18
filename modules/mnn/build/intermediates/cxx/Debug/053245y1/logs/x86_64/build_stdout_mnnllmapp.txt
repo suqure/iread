@@ -1,0 +1,2 @@
+ninja: Entering directory `D:\Android\voiceread\modules\mnn\.cxx\Debug\053245y1\x86_64'
+ninja: no work to do.
